@@ -1,5 +1,6 @@
 import Background from "@/components/Background";
 import Image from "next/image";
+import bg from '../../public/bg.jpg'
 import starwars from '../../public/starwars.png'
 import films from "../../public/films.png"
 import characters from "../../public/characters.png"
@@ -14,14 +15,14 @@ const Home = () => {
       </div>
       
       <div className="flex justify-center gap-x-40">
-        <Background />
+        <Background image={bg}/>
         <Link href='/films' className="flex flex-col items-center hover:scale-125 transition-all">
           <Image src={films} alt="Characters" className=""/>
           <h2 className='text-3xl font-bold text-white'>FILMS</h2>
         </Link>
         <Link href='/characters' className="flex flex-col items-center hover:scale-125 transition-all">
           <Image src={characters} alt="Characters" className=""/>
-          <h2 className='text-3xl font-bold text-white'>CHARACTERS</h2>
+          <h2 className='text-3xl font-bold text-white '>CHARACTERS</h2>
         </Link>
       </div>
     </div>
