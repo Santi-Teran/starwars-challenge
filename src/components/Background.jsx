@@ -1,11 +1,10 @@
 import Image from 'next/image';
-import bg from '../../public/bg.jpg'
 
-const Background = () => {
+const Background = ({ image }) => {
   return (
     <Image 
       alt='starwars'
-      src={bg}
+      src={image}
       quality={100}
       fill
       className='object-cover -z-10'
