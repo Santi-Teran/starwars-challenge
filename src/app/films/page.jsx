@@ -1,5 +1,5 @@
-import React from 'react'
 import FilmsComponent from '@/components/FilmsComponent';
+
 const getFilms = async () => {
   const res = await fetch('https://swapi.dev/api/films/');
   
@@ -13,7 +13,7 @@ const Films = async () => {
   const films = await getFilms();
 
   return (
-    <div className=' grid grid-cols-3 gap-20 p-32'>
+    <div className='grid grid-cols-3 gap-20 p-32 bg-gray-800'>
       { films.results.map((film) => (
         <div key={film.episode_id}>
           <FilmsComponent film={film} />
