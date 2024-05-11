@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import starwars from '../../public/starwars.png'
+import Link from 'next/link';
 
 const NavBar = () => {
   return (
-    <div className='flex flex-col items-center'>
-      <Image src={starwars} alt='StarWars'/>
-      <h2 className='text-3xl font-thin text-white mb-32'>DISCOVERY</h2>
+    <div className='px-12 flex items-center gap-x-20'>
+      <Link href='/'>
+        <Image src={starwars} alt='StarWars'/>
+      </Link>
+      <input placeholder='Search '/>
+      <span>Filter</span>
     </div>
   )
 }

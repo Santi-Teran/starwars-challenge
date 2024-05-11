@@ -13,3 +13,38 @@
   min-width: 0;
   margin: 0 10px;
 }
+
+.star-wars-gradient {
+  background: linear-gradient(135deg, #020111 0%, #191621 100%);
+  position: relative;
+  z-index: 2;
+}
+
+.gradient {
+  background: linear-gradient(120deg, #8547b2 0%, #1b0626 100%);
+}
+
+/* .star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  animation: twinkling 1s infinite;
+  top: calc(var(--star-top) * 100%);
+  left: calc(var(--star-left) * 100%);
+  animation-delay: calc(var(--animation-delay) * 10s);
+  z-index: -1;
+}
+
+@keyframes twinkling {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+} */
