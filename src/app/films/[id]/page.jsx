@@ -3,6 +3,9 @@ import darth from '../../../../public/darth.jpeg'
 import filmdetail from '../../../../public/filmdetail.png'
 import Background from "@/components/Background";
 import CharactersCarousel from "@/components/CharactersCarousel";
+import Link from "next/link";
+import { IoArrowBackCircle } from "react-icons/io5";
+
 
 const getCharacterDetails = async (characterUrl) => {
   const res = await fetch(characterUrl);
@@ -36,12 +39,13 @@ const FilmDetail = async ({ params }) => {
   const film = await getFilmDetail(id);
 
   return (
-    <div className="py-12 px-24 flex justify-between text-white">
+    <div className="h-screen py-12 px-24 flex justify-between text-white">
       <Background image={filmdetail} />
+      <Link href='/films' className=" text-6xl hover:scale-105 transition-all"><IoArrowBackCircle /></Link>
         <div>
           <h1 className='text-4xl font-bold'>{film.title.toUpperCase()}</h1>
           <h2 className='text-2xl'>EPISODE {film.episode_id}</h2>
-          <Image  src={darth} alt='Darth Vader' className='rounded-xl w-3/5 m-10' />
+          <Image  src={darth} alt='Darth Vader' className='rounded-xl lg:w-1/2 m-10' />
         </div>
         
         <div className="flex flex-col items-end justify-center">

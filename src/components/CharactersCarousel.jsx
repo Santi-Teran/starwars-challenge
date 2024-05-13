@@ -1,9 +1,10 @@
 'use client'
-import React, { useCallback } from 'react'
-import Image from 'next/image'
-import characterss from '../../public/characters.png'
-import useEmblaCarousel from 'embla-carousel-react'
-import Link from 'next/link'
+import React, { useCallback } from 'react';
+import Image from 'next/image';
+import characterss from '../../public/characters.png';
+import useEmblaCarousel from 'embla-carousel-react';
+import Link from 'next/link';
+import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 
 const CharactersCarousel = ( {characters} ) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true})
@@ -18,7 +19,7 @@ const CharactersCarousel = ( {characters} ) => {
 
   return (
     <div className='flex '>
-      <button className="embla__prev" onClick={scrollPrev}>Prev</button>
+      <button className="embla__prev text-4xl" onClick={scrollPrev}><MdNavigateBefore /></button>
       <div className="embla__viewport max-w-3xl" ref={emblaRef}>
         <div className="embla__container">
           {characters.map((character, index) => (
@@ -31,7 +32,7 @@ const CharactersCarousel = ( {characters} ) => {
         ))}
         </div>
       </div>
-      <button className="embla__next" onClick={scrollNext}>Next</button>
+      <button className="embla__next text-4xl" onClick={scrollNext}><MdNavigateNext /></button>
     </div>
   )
 }

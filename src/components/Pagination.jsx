@@ -1,6 +1,5 @@
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 
-
 const Pagination = ({ page, totalPages, goToPage, nextPage, prevPage }) => {
   const pageNumbers = [];
   for (let i = 1; i <= totalPages; i++) {
@@ -8,7 +7,7 @@ const Pagination = ({ page, totalPages, goToPage, nextPage, prevPage }) => {
   };
 
   return (
-    <div className='flex my-8 py-2 px-4 bg-gray-400 w-fit mx-auto rounded-full shadow-lg'>
+    <div className='flex py-2 px-4 bg-gray-400 w-fit mx-auto rounded-full shadow-lg'>
       <button onClick={prevPage} disabled={page === 1} className="text-4xl hover:scale-125 transition-all cursor-pointer"><MdNavigateBefore /></button>
       {pageNumbers.map((pageNumber) => (
         <button
