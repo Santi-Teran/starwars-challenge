@@ -21,7 +21,7 @@ const Films = async () => {
       <Link href='/' className='w-fit flex mx-12'>
         <Image src={starwars} alt='StarWars'/>
       </Link>
-      <div className='grid grid-cols-3 gap-20 px-32 py-12'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 my-10 md:mx-20 mx-10'>
         { films.results.map((film) => (
           <div key={film.episode_id}>
             <FilmsComponent film={film} />

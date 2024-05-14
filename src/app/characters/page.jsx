@@ -70,7 +70,7 @@ const Characters = () => {
   };
 
   return (
-    <div className='star-wars-gradient text-white'>
+    <div className='star-wars-gradient text-white w-fit'>
       <NavBar 
         handleSearchInputChange={handleSearchInputChange}
         handleGenderFilterChange={handleGenderFilterChange}
@@ -90,7 +90,7 @@ const Characters = () => {
       ) : ( characters.length == 0 ) ? (
         <div className='flex justify-center my-40 text-4xl'>No characters with those filters</div> 
       ) : (
-        <div className='grid grid-cols-3 gap-10 my-10 mx-20 z-10'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 my-10 md:mx-20'>
           {characters.map((character) => (
             <div key={character.url}>
               <CharacterComponent character={character} />

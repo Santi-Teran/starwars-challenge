@@ -1,8 +1,11 @@
+import { IoMdMale, IoIosEye } from "react-icons/io";
+
 const Filter = ({ handleGenderFilterChange, handleEyeColorFilterChange }) => {
   return (
     <div className="flex items-center gap-20">
       <div className="flex gap-2">
-        <label className="text-gray-400">Gender:</label>
+        <label className="text-gray-400 flex md:hidden items-center"><IoMdMale /></label>
+        <label className="text-gray-400 hidden md:flex">Gender:</label>
         <select onChange={handleGenderFilterChange} className="bg-transparent cursor-pointer">
           <option value="" className="text-black">All</option>
           <option value="male" className="text-black">Male</option>
@@ -10,7 +13,8 @@ const Filter = ({ handleGenderFilterChange, handleEyeColorFilterChange }) => {
         </select>
       </div>
       <div className="flex gap-2">
-        <label className="text-gray-400">Eye Color:</label>
+        <label className="text-gray-400 flex md:hidden items-center"><IoIosEye /></label>
+        <label className="text-gray-400 hidden md:flex">Eye Color:</label>
         <select onChange={handleEyeColorFilterChange} className="bg-transparent cursor-pointer">
           <option className="text-black" value="">All</option>
           <option className="text-black" value="blue">Blue</option>

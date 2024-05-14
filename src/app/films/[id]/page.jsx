@@ -39,31 +39,31 @@ const FilmDetail = async ({ params }) => {
   const film = await getFilmDetail(id);
 
   return (
-    <div className="h-screen py-12 px-24 flex justify-between text-white">
+    <div className="md:h-screen overflow-hidden bg-blackk md:bg-transparent py-12 md:px-24 p-12 flex justify-between text-white flex-col md:flex-row">
+      <Link href='/films' className="md:text-6xl text-4xl hover:scale-110 transition-all"><IoArrowBackCircle /></Link>
       <Background image={filmdetail} />
-      <Link href='/films' className=" text-6xl hover:scale-105 transition-all"><IoArrowBackCircle /></Link>
-        <div>
-          <h1 className='text-4xl font-bold'>{film.title.toUpperCase()}</h1>
-          <h2 className='text-2xl'>EPISODE {film.episode_id}</h2>
-          <Image  src={darth} alt='Darth Vader' className='rounded-xl lg:w-1/2 m-10' />
-        </div>
+      <div className="flex flex-col">
+        <h1 className='text-4xl font-bold text-center md:text-justify'>{film.title.toUpperCase()}</h1>
+        <h2 className='text-2xl text-center md:text-justify'>EPISODE {film.episode_id}</h2>
+        <Image  src={darth} alt='Darth Vader' className='rounded-xl lg:w-1/2 md:m-10' />
+      </div>
         
-        <div className="flex flex-col items-end justify-center">
-          <div className="flex gap-10 absolute top-12">
-            <div className="text-end">
-              <h3 >Director:</h3>
-              <h4 className="text-xl">{film.director}</h4>  
-            </div>
-            <div className="text-end">
-              <h3>Producer:</h3>
-              <h4 className="text-xl">{film.producer}</h4>
-            </div>
-            <div className="text-end">
-              <h3>Year:</h3>
-              <h4 className="text-xl">{film.release_date.split('-')[0]}</h4>
-            </div>
+      <div className="flex flex-col items-end justify-center">
+        <div className="flex gap-10 md:absolute md:top-12">
+          <div className="text-end">
+            <h3 >Director:</h3>
+            <h4 className="text-xl">{film.director}</h4>  
           </div>
-          <CharactersCarousel characters={film.characters} />
+          <div className="text-end">
+            <h3>Producer:</h3>
+            <h4 className="text-xl">{film.producer}</h4>
+          </div>
+          <div className="text-end">
+            <h3>Year:</h3>
+            <h4 className="text-xl">{film.release_date.split('-')[0]}</h4>
+          </div>
+        </div>
+        <CharactersCarousel characters={film.characters} />
       </div>
     </div>
   )

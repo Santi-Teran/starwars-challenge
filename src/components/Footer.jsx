@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className='flex justify-between star-wars-gradient p-2 text-white'>
+    <div className='flex justify-between star-wars-gradient p-2 text-white flex-col items-center md:flex-row'>
       <div className='flex items-center gap-x-2'>
         <FaRegCopyright />
         <p className="text-sm lg:text-base">2024 Santiago Teran. Done with</p>

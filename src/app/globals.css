@@ -2,16 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.embla__viewport {
-  overflow: hidden;
-}
-.embla__container {
-  display: flex;
-}
 .embla__slide {
-  flex: 0 0 33%;
-  min-width: 0;
-  margin: 0 10px;
+  flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 33%;
+  }
 }
 
 .star-wars-gradient {

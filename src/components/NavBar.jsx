@@ -6,7 +6,7 @@ import Filter from './Filter';
 
 const NavBar = ({ handleSearchInputChange, handleGenderFilterChange, handleEyeColorFilterChange }) => {
   return (
-    <div className='px-12 flex items-center gap-x-20'>
+    <div className='md:px-12 flex items-center md:gap-x-20 flex-col md:flex-row gap-y-8 py-8 md:gap-y-0 md:py-0'>
       <Link href='/'>
         <Image src={starwars} alt='StarWars'/>
       </Link>

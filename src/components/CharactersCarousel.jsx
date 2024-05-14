@@ -18,10 +18,10 @@ const CharactersCarousel = ( {characters} ) => {
   }, [emblaApi])
 
   return (
-    <div className='flex '>
-      <button className="embla__prev text-4xl" onClick={scrollPrev}><MdNavigateBefore /></button>
-      <div className="embla__viewport max-w-3xl" ref={emblaRef}>
-        <div className="embla__container">
+    <div className='flex mx-auto'>
+      <button className="text-4xl" onClick={scrollPrev}><MdNavigateBefore /></button>
+      <div className="overflow-hidden max-w-40 md:max-w-2xl" ref={emblaRef}>
+        <div className="flex">
           {characters.map((character, index) => (
           <div key={index} className="embla__slide justify-center flex items-center flex-col">
             <Link href={`/characters/${character.url}`} className='hover:scale-125 transition-all'>
@@ -32,7 +32,7 @@ const CharactersCarousel = ( {characters} ) => {
         ))}
         </div>
       </div>
-      <button className="embla__next text-4xl" onClick={scrollNext}><MdNavigateNext /></button>
+      <button className="text-4xl" onClick={scrollNext}><MdNavigateNext /></button>
     </div>
   )
 }

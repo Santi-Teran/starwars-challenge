@@ -7,7 +7,7 @@ const CharacterComponent = ({ character }) => {
   const id = character.url.split('/')[5];
 
   return (
-    <div className='flex flex-col gradient rounded-xl shadow-xl w-3/5 mx-auto hover:scale-110 transition-all'>
+    <div className='flex flex-col gradient rounded-xl shadow-xl md:w-3/5 w-1/2 mx-auto hover:scale-110 transition-all'>
       <Link href={`/characters/${id}`} >
         <Image src={darth} alt='Darth Vader' className='rounded-t-xl'/>
         <div className='p-2 text-white'>

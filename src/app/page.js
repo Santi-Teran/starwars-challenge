@@ -11,10 +11,10 @@ const Home = () => {
     <div>
       <div className='flex flex-col items-center'>
         <Image src={starwars} alt='StarWars'/>
-        <h2 className='text-3xl font-thin text-white mb-32 drop-shadow-2xl'>DISCOVERY</h2>
+        <h2 className='text-3xl font-thin text-white md:mb-32 mb-12 drop-shadow-2xl'>DISCOVERY</h2>
       </div>
       
-      <div className="flex justify-center gap-x-40">
+      <div className="flex justify-center gap-x-40 flex-col md:flex-row gap-y-10 md:gap-y-0">
         <Background image={bg}/>
         <Link href='/films' className="flex flex-col items-center hover:scale-125 transition-all">
           <Image src={films} alt="Characters" className="drop-shadow-2xl"/>
