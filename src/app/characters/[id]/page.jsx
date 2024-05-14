@@ -23,7 +23,7 @@ const CharacterDetail = async ({ params }) => {
     <div className="flex h-screen justify-between text-white overflow-hidden flex-col lg:flex-row">
       <Link href='/characters' className="absolute lg:m-20 m-5 lg:text-6xl text-4xl hover:scale-110 transition-all"><IoArrowBackCircle /></Link>
       <Background image={characterdetail} />
-      <div className="flex lg:items-end flex-col lg:flex-row items-center m-5 lg:m-0">
+      <div className="flex flex-col lg:flex-row items-center m-5 lg:m-0">
         <div className="lg:p-20">
           <h2 className="lg:text-7xl text-4xl font-bold text-center lg:text-justify">{name.toUpperCase()}</h2>
           <h2 className="lg:text-7xl text-4xl font-bold text-center lg:text-justify">{lastName && lastName.toUpperCase()}</h2>
