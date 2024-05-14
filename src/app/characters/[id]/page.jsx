@@ -1,6 +1,6 @@
 import Background from "@/components/Background";
 import characterdetail from '../../../../public/characterdetail.jpg'
-import anakin from '../../../../public/anakin.png'
+import darth from '../../../../public/darth.jpeg'
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowBackCircle } from "react-icons/io5";
@@ -20,20 +20,18 @@ const CharacterDetail = async ({ params }) => {
   const [name, lastName] = character.name.split(' ');
 
   return (
-    <div className="flex h-screen justify-between text-white overflow-hidden flex-col md:flex-row">
-      <Link href='/characters' className="absolute md:m-20 m-5 md:text-6xl text-4xl hover:scale-110 transition-all"><IoArrowBackCircle /></Link>
+    <div className="flex h-screen justify-between text-white overflow-hidden flex-col lg:flex-row">
+      <Link href='/characters' className="absolute lg:m-20 m-5 lg:text-6xl text-4xl hover:scale-110 transition-all"><IoArrowBackCircle /></Link>
       <Background image={characterdetail} />
-      <div className="flex md:items-end flex-col md:flex-row items-center m-5 md:m-0">
-        <div className="md:p-20">
-          <h2 className="md:text-7xl text-4xl font-bold text-center md:text-justify">{name.toUpperCase()}</h2>
-          <h2 className="md:text-7xl text-4xl font-bold text-center md:text-justify">{lastName && lastName.toUpperCase()}</h2>
+      <div className="flex lg:items-end flex-col lg:flex-row items-center m-5 lg:m-0">
+        <div className="lg:p-20">
+          <h2 className="lg:text-7xl text-4xl font-bold text-center lg:text-justify">{name.toUpperCase()}</h2>
+          <h2 className="lg:text-7xl text-4xl font-bold text-center lg:text-justify">{lastName && lastName.toUpperCase()}</h2>
         </div>
-        <span className="md:py-20 py-5 md:z-10">{character.birth_year !== 'unknown' ? character.birth_year : ''}</span>
-        <Image src={anakin} alt={character.name} className="absolute md:left-40 top-40 md:top-12 -z-10 md:z-0"/>
+        <span className="lg:py-20 py-5 lg:z-10">{character.birth_year !== 'unknown' ? character.birth_year : ''}</span>
       </div>
-
-      <div className="bg-blackk md:mt-20 md:p-20 py-20 rounded-t-lg md:pl-72 flex flex-col">
-        <div className="flex gap-10 text-sm md:text-base">
+      <div className="bg-blackk lg:mt-20 py-20 rounded-t-lg flex flex-col justify-center items-center">
+        <div className="flex gap-10 text-sm lg:text-base">
           <div>
             <p>Height:</p>
             <p>{character.height !== 'unknown' ? character.height : ''}cm</p>
@@ -55,6 +53,7 @@ const CharacterDetail = async ({ params }) => {
             <p>{character.eye_color}</p>
           </div> 
         </div>   
+        <Image src={darth} alt={character.name} className="w-1/2 rounded shadow-xl" /> 
       </div>
     </div>
   )

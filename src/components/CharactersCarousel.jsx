@@ -20,7 +20,7 @@ const CharactersCarousel = ( {characters} ) => {
   return (
     <div className='flex mx-auto'>
       <button className="text-4xl" onClick={scrollPrev}><MdNavigateBefore /></button>
-      <div className="overflow-hidden max-w-40 md:max-w-2xl" ref={emblaRef}>
+      <div className="overflow-hidden max-w-40 md:max-w-lg" ref={emblaRef}>
         <div className="flex">
           {characters.map((character, index) => (
           <div key={index} className="embla__slide justify-center flex items-center flex-col">

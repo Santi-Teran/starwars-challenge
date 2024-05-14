@@ -32,24 +32,23 @@ const getFilmDetail = async (id) => {
   return filmData;
 };
 
-
 const FilmDetail = async ({ params }) => {
 
   const { id } = params;
   const film = await getFilmDetail(id);
 
   return (
-    <div className="md:h-screen overflow-hidden bg-blackk md:bg-transparent py-12 md:px-24 p-12 flex justify-between text-white flex-col md:flex-row">
-      <Link href='/films' className="md:text-6xl text-4xl hover:scale-110 transition-all"><IoArrowBackCircle /></Link>
+    <div className="lg:h-screen overflow-hidden bg-blackk lg:bg-transparent py-12 lg:px-24 p-12 flex justify-between text-white flex-col lg:flex-row">
+      <Link href='/films' className="lg:text-6xl text-4xl hover:scale-110 transition-all"><IoArrowBackCircle /></Link>
       <Background image={filmdetail} />
       <div className="flex flex-col">
-        <h1 className='text-4xl font-bold text-center md:text-justify'>{film.title.toUpperCase()}</h1>
-        <h2 className='text-2xl text-center md:text-justify'>EPISODE {film.episode_id}</h2>
-        <Image  src={darth} alt='Darth Vader' className='rounded-xl lg:w-1/2 md:m-10' />
+        <h1 className='text-4xl font-bold text-center lg:text-justify'>{film.title.toUpperCase()}</h1>
+        <h2 className='text-2xl text-center lg:text-justify'>EPISODE {film.episode_id}</h2>
+        <Image  src={darth} alt='Darth Vader' className='rounded-xl lg:w-1/2 lg:m-10' />
       </div>
         
       <div className="flex flex-col items-end justify-center">
-        <div className="flex gap-10 md:absolute md:top-12">
+        <div className="flex gap-10 lg:absolute lg:top-12">
           <div className="text-end">
             <h3 >Director:</h3>
             <h4 className="text-xl">{film.director}</h4>  
